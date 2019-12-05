@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="avatar">
+                <img src="./img/my_photo-2.png" alt="Vova Serko">
+            </div>
+            <div class="about-Vova">
+                <h1>Vova Serko</h1>
+                <p>
+                    <a href="https://github.com/Vir45?tab=repositories" target="_blank"><img class="github" src="./img/GitHub_Logo.png" alt="github-Vova"></a>
+                </p>
+                <div class="social">
+                    <a href="https://myaccount.google.com/?utm_source=OGB&tab=kk&utm_medium=app" target="_blank"><img src="./img/google.png" alt="google-account"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100002413502902" target="_blank"><img src="./img/facebook.png" alt="facebook-acount"></a>
+                    <a href="https://www.youtube.com/channel/UCAQ5aP7fRsoE4lkwf2lzJCg" target="_blank"><img src="./img/youtube.png" alt="youtube-channel"></a>
+                    <a href="https://twitter.com/Vova85508390" target="_blank"><img src="./img/twit.png" alt="twitter"></a>
+                </div>
+            </div>
+
+        </header>
+        <hr>
+
+        <main>
+            <div class="education">
+                <div class="list-education">
+                    <h2>Education</h2>
+                    <a id="menu" onclick="down()">&or;</a>
+                </div>
+                <ul id="dropdown" hidden>
+                    <li>School<br><span>1999 - 2010</span></li>
+                    <li>University<br><span>2010 - 2014</span></li>
+                    <li>RSSchool Cuorses<br><span>2019 - </span></li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="projects">
+                <h2>Projects</h2>
+                <button class="controls" id="previous">&#60;</button>
+                <button class="controls" id="next">&#62;</button>
+                <ul id="slides">
+
+                    <li class="slide showing">
+                        <div class="theyalow">
+                            <div class="about-slide">
+                                <h3>theyalow</h2>
+                                    <ul>
+                                        <li>cross-browser</li>
+                                        <li>adaptability</li>
+                                        <li>semantics</li>
+                                        <li>validity</li>
+                                    </ul>
+                                    <div class="click">
+                                        <p class="ckick-description">Click on image to see the project</p>
+                                        <p class="allow">&#62;</p>
+                                    </div>
+                            </div>
+                            <div class="image-progect">
+                                <a href="./theyalow/index.html"><img src="./img/THEYALOW.jpg" alt="theyalow"></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="slide">
+                        <div class="repair-disign">
+                            <div class="about-slide repair">
+                                <h3>repair-disign-project</h2>
+                                    <ul>
+                                        <li>cross-browser compatibility</li>
+                                        <li>search Engine compliance</li>
+                                        <li>rubber layout</li>
+                                        <li>validity</li>
+                                    </ul>
+                                    <div class="click">
+                                        <p class="ckick-description">Click on image to see the project</p>
+                                        <p class="allow">&#62;</p>
+                                    </div>
+                            </div>
+                            <div class="home-progect">
+                                <a href="./rep/index.html"><img src="./img/home-1.jpg" alt="repair-disign-project"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-mobile">
+                <div class="click-description">
+                    <h3>click for description project</h3>
+                    <button onclick="downDescription()" class="first-project second-project">&or;</button>
+                </div>
+                <p class="action-description">swipe to see other</p>
+                <div class="about-slide-theyalow" hidden>
+                    <h4 class="title-about-slider">theyalow</h2>
+                        <ul class="list-about-slider">
+                            <li>cross-browser</li>
+                            <li>adaptability</li>
+                            <li>semantics</li>
+                            <li>validity</li>
+                        </ul>
+                </div>
+
+                <div class="about-slide-repair" hidden>
+                    <h4 class="title-about-slider">repair-disign-project</h2>
+                        <ul class="list-about-slider">
+                            <li>cross-browser compatibility</li>
+                            <li>search Engine compliance</li>
+                            <li>rubber layout</li>
+                            <li>validity</li>
+                        </ul>
+                </div>
+
+                <ul id="swipers">
+                    <li class="swiper showings">
+                        <div id="image-theyalow">
+                            <a href="./theyalow/index2.html"><img src="./img/THEYALOW.jpg" alt="theyalow"></a>
+                        </div>
+                    </li>
+                    <li class="swiper">
+                        <div id="image-repair">
+                            <a href="./rep/rep2/index2.html"><img src="./img/home-1.jpg" alt="repair-disign-project"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function down() {
+            let ul = document.getElementById('dropdown');
+            if (ul.hidden == true) {
+                ul.hidden = false;
+            } else if (ul.hidden == false) {
+                ul.hidden = true;
+            }
+        }
+    </script>
+    <script src="slider.js"></script>
+    <script src="swiper.js"></script>
+    <script src="descriptionproject.js"></script>
+</body>
+
+</html>
